@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Predictions on Craig Sullivan&#39;s Github Site</title>
+    <link>/tags/predictions/</link>
+    <description>Recent content in Predictions on Craig Sullivan&#39;s Github Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/predictions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How My Machine Learning Predicted My Whole Bracket</title>
+      <link>/2021/03/23/how-my-machine-learning-predicted-my-whole-bracket/</link>
+      <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/2021/03/23/how-my-machine-learning-predicted-my-whole-bracket/</guid>
+      <description>Coming into the year I had watched a lot of college basketball, sometimes multiple games per day. As my own college and classwork stepped up so did my free time to watch as much basketball. I still watched every Nebraska game start to finish and various other top 25 programs but I never saw Oral Roberts or Loyola Chicago this year.
+To supplement my lack of first hand experience with some of the field of 64 this year I made a model that predicted the outcome of each game with a win or loss prediction.</description>
+    </item>
+    
+  </channel>
+</rss>

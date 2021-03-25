@@ -62,7 +62,7 @@
 
   <article class="article">
     
-    <span class="article-duration">11 min read</span>
+    <span class="article-duration">12 min read</span>
     
 
     <h1 class="article-title">How My Machine Learning Predicted My Whole Bracket</h1>
@@ -232,10 +232,6 @@ trainpredict</code></pre>
 ## #   Opponent_Rolling_Mean_Assists &lt;dbl&gt;, Opponent_Rolling_Mean_Turnovers &lt;dbl&gt;,
 ## #   OpponentSRS &lt;dbl&gt;, OpponentSOS &lt;dbl&gt;,
 ## #   Opponent_Rolling_Mean_Effective_FG_Percent &lt;dbl&gt;</code></pre>
-<pre class="r"><code>trainpredict &lt;- log_fit %&gt;% predict(new_data = log_train, type=&quot;prob&quot;) %&gt;%
-  bind_cols(trainpredict)
-
-trainpredict</code></pre>
 <pre><code>## # A tibble: 34,191 x 18
 ##    .pred_L .pred_W .pred_class Season Team  Date       Opponent Outcome
 ##      &lt;dbl&gt;   &lt;dbl&gt; &lt;fct&gt;       &lt;chr&gt;  &lt;chr&gt; &lt;date&gt;     &lt;chr&gt;    &lt;fct&gt;  
@@ -255,14 +251,11 @@ trainpredict</code></pre>
 ## #   Opponent_Rolling_Mean_Assists &lt;dbl&gt;, Opponent_Rolling_Mean_Turnovers &lt;dbl&gt;,
 ## #   OpponentSRS &lt;dbl&gt;, OpponentSOS &lt;dbl&gt;,
 ## #   Opponent_Rolling_Mean_Effective_FG_Percent &lt;dbl&gt;</code></pre>
-<pre class="r"><code>metrics(trainpredict, Outcome, .pred_class)</code></pre>
 <pre><code>## # A tibble: 2 x 3
 ##   .metric  .estimator .estimate
 ##   &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;
 ## 1 accuracy binary         0.983
 ## 2 kap      binary         0.966</code></pre>
-<pre class="r"><code>trainpredict %&gt;%
-  conf_mat(Outcome, .pred_class)</code></pre>
 <pre><code>##           Truth
 ## Prediction     L     W
 ##          L 16804   285
@@ -272,6 +265,7 @@ trainpredict</code></pre>
 ##   .metric .estimator .estimate
 ##   &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;
 ## 1 roc_auc binary      0.000991</code></pre>
+<p>An over 70% predicive rate sounds good on paper and that is the kind of rate that would preform well in Vegas. If my model could keep that kind of predictivity going into the bracket I would be sitting pretty.</p>
 <pre class="r"><code>roc_auc(trainpredict, truth = Outcome, .pred_L)</code></pre>
 <pre><code>## # A tibble: 1 x 3
 ##   .metric .estimator .estimate
@@ -432,6 +426,13 @@ UCLA
 </tr>
 </tbody>
 </table>
+<p>Here you can see that the model was reasonably good at predicting the play-in games. 2/4 but the glaring one was thinking Mt Saint Mary’s had 65% chance of winning while they lost. That percentage seems to mostly have carried over to the bracket at large.</p>
+<p>OVERALL</p>
+<p>My bracket is currently in the 41.9 percentile which is not good at all. I am currently in second to last but I have not had too many major bracket busting games happen. Most so far have been just costing me points now but not damaging my future potential and keeping Gonzaga alive will be crucial to keeping my bracket above water.</p>
+<p>My Bracket:</p>
+<p><img src="images/Top%20Bracket.jpg" /></p>
+<p><img src="images/Bottom%20of%20the%20bracket.jpg" /></p>
+<p>While it has not equaled success yet there are more games left and I have many points still up for grabs. Hopefully my model can realign with the results and Baylor meets Gonzaga in the finals to validate it.</p>
 
     </div>
   </article>

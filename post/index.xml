@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Craig Sullivan&#39;s Github Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How My Machine Learning Bracket Did</title>
+      <link>/2021/04/09/how-my-machine-learning-bracket-did/</link>
+      <pubDate>Fri, 09 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/2021/04/09/how-my-machine-learning-bracket-did/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>How My Machine Learning Predicted My Whole Bracket</title>
       <link>/2021/03/23/how-my-machine-learning-predicted-my-whole-bracket/</link>
